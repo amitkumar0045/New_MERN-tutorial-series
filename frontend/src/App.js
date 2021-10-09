@@ -4,12 +4,13 @@ import Footer from './components/Footer';
 
 function App() {
   return (
+    <>
+      <main style={{ minHeight: "93vh" }}>
+        <Header />
 
-    <main style={{ minHeight: "93vh" }}>
-      <Header />
+      </main>
       <Footer />
-    </main>
-
+    </>
   );
 }
 
