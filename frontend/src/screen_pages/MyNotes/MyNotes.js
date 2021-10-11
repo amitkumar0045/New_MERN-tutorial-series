@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Accordion, Badge, Button, Card } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import axios from 'axios'
+// import axios from 'axios'
 
 import MainScreen from '../../components/MainScreen'
-// import notes from '../../data/notes'
+import notes from '../../data/notes'
 
 
 const MyNotes = () => {
 
-    const [notes, setNotes] = useState([])
+    // const [notes, setNotes] = useState([])
 
 
 
@@ -21,8 +21,8 @@ const MyNotes = () => {
     const fetchNotes = async () => {
         // const data = await axios.get('http://localhost:5000/api/notes')
         // const data = await axios.get('/api/notes')
-        const { data } = await axios.get('/api/notes')
-        setNotes(data)
+        // const { data } = await axios.get('/api/notes')
+        // setNotes(data)
         console.log('data>>', notes);
     }
 
