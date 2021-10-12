@@ -1,10 +1,12 @@
 
 const express = require('express')
 const notes = require('./data/notes') //dummy  data
-const dotenv = require('dotenv')
+const dotenv = require('dotenv');
+const connectDB = require('./config/db');
 
 const app = express();
 dotenv.config();
+connectDB();
 
 
 
