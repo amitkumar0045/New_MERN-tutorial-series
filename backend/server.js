@@ -4,6 +4,7 @@ const dotenv = require("dotenv");//contains secrt info like api-keys
 const connectDB = require('./config/db');
 
 const userRoute = require('./routes/userRoute')
+const { notFound, errorHandler } = require('./middlewares/errorMiddleWare')
 
 
 
@@ -28,6 +29,9 @@ connectDB();
 //\\----
 
 app.use('/api/users', userRoute);  // using Routes
+
+app.use(notFound);  // using MiddleWares
+app.use(errorHandler); //using MiddleWares
 
 
 const PORT = process.env.PORT || 5000;
