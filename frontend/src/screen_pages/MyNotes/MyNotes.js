@@ -8,7 +8,7 @@ import MainScreen from '../../components/MainScreen'
 
 const MyNotes = () => {
 
-    const [notes, setNotes] = useState([])
+    const [notes, setNotes] = useState([]);
 
     const deleteHandler = (id) => {
         if (window.confirm("Are you sure?")) {
@@ -16,12 +16,11 @@ const MyNotes = () => {
     }
 
     const fetchNotes = async () => {
-        const { data } = await axios.get('/api/notes') //with destructring  
-        setNotes(data)
+        const { data } = await axios.get("/api/notes"); //with destructring  
+        setNotes(data);
         console.log('data>>', data);
-        console.log('daata>>', notes);
     }
-
+    console.log('daata>>', notes);
 
     useEffect(() => {
         fetchNotes()

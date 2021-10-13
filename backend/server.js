@@ -28,7 +28,7 @@ connectDB();
 // })
 //\\----
 
-app.use('/api/users', userRoute);  // using Routes
+app.use("/api/users", userRoute);  // using Routes
 
 app.use(notFound);  // using MiddleWares
 app.use(errorHandler); //using MiddleWares

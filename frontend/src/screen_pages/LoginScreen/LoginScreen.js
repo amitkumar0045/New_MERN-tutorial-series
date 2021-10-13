@@ -5,7 +5,7 @@ import MainScreen from '../../components/MainScreen'
 import axios from 'axios'
 import Loading from '../../components/Loading'
 import ErrorMessage from '../../components/ErrorMessage'
-
+import "./LoginScreen.css"
 
 const LoginScreen = () => {
     const [email, setEmail] = useState('')
